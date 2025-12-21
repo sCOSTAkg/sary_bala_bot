@@ -95,38 +95,36 @@ async def chat_handler(message: Message, bot: Bot):
     await handle_response_stream(message, prompt, images)
 
 async def handle_response_stream(message: Message, prompt: str, images: list = None, audio_path: str = None):
-    """Общий обработчик с поддержкой стриминга"""
+    """Общий обработчик с поддержкой стриминга и защитой от FloodWait"""
     
-    # Отправляем начальное сообщение "..."
     answer_msg = await message.answer("⏳ Думаю...")
     
     last_text = ""
-    # Счетчик обновлений, чтобы не спамить Telegram API (лимит ~1 раз в сек)
-    update_counter = 0
+    last_update_time = 0
+    import time
     
     try:
         async for chunk_text in gemini_service.generate_response_stream(
             message.from_user.id, prompt, images, audio_path
         ):
-            # Обновляем каждые 20 символов или каждые 10 чанков, но лучше по времени.
-            # Для простоты: обновляем если длина изменилась значительно (>20 символов)
-            # или если это последний чанк.
+            # Telegram разрешает редактировать сообщение не чаще чем раз в ~1-2 сек (для разных чатов по-разному, но безопасно раз в 1.5с)
+            current_time = time.time()
             
-            if len(chunk_text) - len(last_text) > 30 or update_counter == 0:
+            # Обновляем, если прошло > 1.0 сек ИЛИ текст изменился значительно (>50 симв)
+            if (current_time - last_update_time > 1.0) or (len(chunk_text) - len(last_text) > 100):
                 try:
-                    await answer_msg.edit_text(chunk_text + " ▌") # Курсор
+                    await answer_msg.edit_text(chunk_text + " ▌") 
                     last_text = chunk_text
+                    last_update_time = current_time
                 except Exception:
-                    pass # Игнорируем ошибки редактирования (например, если текст не изменился)
+                    pass 
             
-            update_counter += 1
-            if update_counter > 10: update_counter = 0 # Сброс для тайминга (условно)
-            
-        # Финальное обновление (убираем курсор)
+        # Финальное обновление
         if last_text != chunk_text:
             await answer_msg.edit_text(chunk_text, parse_mode="Markdown")
         else:
             await answer_msg.edit_text(chunk_text, parse_mode="Markdown")
             
     except Exception as e:
+        logger.error(f"Handler error: {e}")
         await answer_msg.edit_text(f"Произошла ошибка: {e}")
