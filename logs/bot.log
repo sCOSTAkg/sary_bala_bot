@@ -1,0 +1,24 @@
+2025-12-21 07:14:24,593 - sary_bala_bot - INFO - Generating response for user 5572422549 using gemini-1.5-flash. Has images: False
+2025-12-21 07:14:25,400 - sary_bala_bot - ERROR - Error generating content: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-12-21 07:14:58,962 - sary_bala_bot - INFO - Image received from 5572422549
+2025-12-21 07:14:58,965 - sary_bala_bot - INFO - Generating response for user 5572422549 using gemini-1.5-flash. Has images: True
+2025-12-21 07:15:01,573 - sary_bala_bot - ERROR - Error generating content: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-12-21 07:18:00,695 - sary_bala_bot - INFO - Generating response for user 5572422549 using gemini-2.5-flash-lite. Has images: False
+2025-12-21 07:18:06,580 - sary_bala_bot - INFO - Generating response for user 5572422549 using gemini-2.5-flash-lite. Has images: False
+2025-12-21 07:18:12,730 - sary_bala_bot - INFO - Image received from 5572422549
+2025-12-21 07:18:12,736 - sary_bala_bot - INFO - Generating response for user 5572422549 using gemini-2.5-flash-lite. Has images: True
+2025-12-21 07:18:52,090 - sary_bala_bot - INFO - Generating response for user 5572422549 using gemini-2.5-computer-use-preview-10-2025. Has images: False
+2025-12-21 07:18:52,582 - sary_bala_bot - ERROR - Ошибка Gemini API (gemini-2.5-computer-use-preview-10-2025): 400 This model requires the use of the Computer Use tool. See https://ai.google.dev/gemini-api/docs/computer-use#send-request for instructions on adding the tool. If you want to use a custom set of functions instead, see https://ai.google.dev/gemini-api/docs/computer-use#custom-functions.
+2025-12-21 07:19:12,724 - sary_bala_bot - INFO - Generating response for user 5572422549 using gemini-3-flash-preview. Has images: False
+2025-12-21 07:30:54,718 - sary_bala_bot - INFO - Stream generation for 5572422549 using gemini-3-flash-preview.
+2025-12-21 07:31:36,941 - sary_bala_bot - INFO - Stream generation for 5572422549 using gemini-3-flash-preview.
+2025-12-21 07:31:40,939 - sary_bala_bot - INFO - Stream generation for 5572422549 using gemini-3-flash-preview.
+2025-12-21 07:31:53,265 - sary_bala_bot - INFO - Stream generation for 5572422549 using gemini-3-flash-preview.
+2025-12-21 07:32:17,783 - sary_bala_bot - INFO - Stream generation for 5572422549 using gemini-3-flash-preview.
+2025-12-21 07:37:08,190 - sary_bala_bot - INFO - Stream generation for 5572422549 using gemini-3-pro-preview.
+2025-12-21 07:37:41,365 - sary_bala_bot - INFO - Stream generation for 5572422549 using gemini-3-pro-preview.
+2025-12-21 07:47:41,306 - sary_bala_bot - ERROR - Stream Error: 504 Deadline Exceeded
+2025-12-21 08:06:15,482 - sary_bala_bot - INFO - Stream generation for 5572422549 using gemini-pro-latest.
+2025-12-21 08:32:10,251 - sary_bala_bot - INFO - Stream generation for 5572422549 using gemini-robotics-er-1.5-preview.
+2025-12-21 08:40:40,777 - sary_bala_bot - INFO - Stream generation for 12345 using gemini-1.5-flash.
+2025-12-21 08:40:41,312 - sary_bala_bot - ERROR - Stream Error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
