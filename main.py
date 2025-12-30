@@ -7,7 +7,7 @@ from config import BOT_TOKEN
 from handlers import user_handlers, settings_handlers
 from database import init_db
 
-# Настройка логгера для вывода в stdout (чтобы Railway видел логи)
+# Настройка логгера для вывода в stdout (стобы Railway видел логи)
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -17,7 +17,15 @@ logger = logging.getLogger("main")
 
 async def main():
     logger.info("Initializing database...")
-    await init_db()
+    
+    # Обработка ошибок инициализации БД
+    try:
+        await init_db()
+        logger.info("Database initialized successfully")
+    except Exception as e:
+        logger.error(f"Database initialization failed: {e}")
+        logger.error("Bot cannot start without database. Exiting...")
+        sys.exit(1)
     
     logger.info("Starting bot...")
     bot = Bot(token=BOT_TOKEN)
