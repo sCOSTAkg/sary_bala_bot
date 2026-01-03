@@ -1,1 +1,138 @@
-aW1wb3J0IG9zCmltcG9ydCBhaW9zcWxpdGUKaW1wb3J0IGFzeW5jcGcKaW1wb3J0IGxvZ2dpbmcKZnJvbSBkYXRldGltZSBpbXBvcnQgZGF0ZXRpbWUKCiMg0J3QsNGB0YLRgNC+0LnQutC4CkRCX05BTUUgPSAiYm90X2RhdGFiYXNlLmRiIgpEQVRBQkFTRV9VUkwgPSBvcy5nZXRlbnYoIkRBVEFCQVNFX1VSTCIpICMgUmFpbHdheSDQv9GA0LXQtNC+0YHRgtCw0LLQu9GP0LXRgiDRjdGC0YMg0L/QtdGA0LXQvNC10L3QvdGD0Y4g0LTQu9GPIFBvc3RncmVzCgpsb2dnZXIgPSBsb2dnaW5nLmdldExvZ2dlcihfX25hbWVfXykKCmNsYXNzIERhdGFiYXNlOgogICAgZGVmIF9faW5pdF9fKHNlbGYpOgogICAgICAgIHNlbGYudHlwZSA9ICJwb3N0Z3JlcyIgaWYgREFUQUJBU0VfVVJMIGVsc2UgInNxbGl0ZSIKICAgICAgICBzZWxmLnBvb2wgPSBOb25lCgogICAgYXN5bmMgZGVmIGNvbm5lY3Qoc2VsZik6CiAgICAgICAgaWYgc2VsZi50eXBlID09ICJwb3N0Z3JlcyI6CiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIHNlbGYucG9vbCA9IGF3YWl0IGFzeW5jcGcuY3JlYXRlX3Bvb2woREFUQUJBU0VfVVJMKQogICAgICAgICAgICAgICAgbG9nZ2VyLmluZm8oIkNvbm5lY3RlZCB0byBQb3N0Z3JlU1FMIikKICAgICAgICAgICAgICAgIGF3YWl0IHNlbGYuaW5pdF9wb3N0Z3JlcygpCiAgICAgICAgICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgICAgICAgICAgICAgIGxvZ2dlci5lcnJvcihmIlBvc3RncmVzIGNvbm5lY3Rpb24gZmFpbGVkOiB7ZX0uIEZhbGxpbmcgYmFjayB0byBTUUxpdGUuIikKICAgICAgICAgICAgICAgIHNlbGYudHlwZSA9ICJzcWxpdGUiCiAgICAgICAgCiAgICAgICAgaWYgc2VsZi50eXBlID09ICJzcWxpdGUiOgogICAgICAgICAgICBsb2dnZXIuaW5mbygiVXNpbmcgU1FMaXRlIikKICAgICAgICAgICAgYXdhaXQgc2VsZi5pbml0X3NxbGl0ZSgpCgogICAgYXN5bmMgZGVmIGluaXRfcG9zdGdyZXMoc2VsZik6CiAgICAgICAgYXN5bmMgd2l0aCBzZWxmLnBvb2wuYWNxdWlyZSgpIGFzIGNvbm46CiAgICAgICAgICAgIGF3YWl0IGNvbm4uZXhlY3V0ZSgiIiIKICAgICAgICAgICAgICAgIENSRUFURSBUQUJMRSBJRiBOT1QgRVhJU1RTIHN1c2VycyAoCiAgICAgICAgICAgICAgICAgICAgdXNlcl9pZCBCSUdJTlQgUFJJTUFSWSBLRVksCiAgICAgICAgICAgICAgICAgICAgdXNlcm5hbWUgVEVYVCwKICAgICAgICAgICAgICAgICAgICBzZWxlY3RlZF9tb2RlbCBURVhUIERFRkFVTFQgJ2dlbWluaS0yLjUtZmxhc2gnLAogICAgICAgICAgICAgICAgICAgIHN5c3RlbV9pbnN0cnVjdGlvbiBURVhUIERFRkFVTFQgJ9Ci0YsgML/QvtC70LXQt9C90YvQuSDQuCDRg9C80L3Ri9C5INCw0YHRgdC40YHRgtC10L3Rgi4nLAogICAgICAgICAgICAgICAgICAgIHRlbXBlcmF0dXJlIFJFQUwgREVGQVVMVCAwLjcsCiAgICAgICAgICAgICAgICAgICAgbWF4X3Rva2VucyBJTlRFR0VSIERFRUFVTFQGNA5NiwKICAgICAgICAgICAgICAgICAgICB1c2VfdG9vbHMgQk9PTEVBTiBERUZBVUxUIEZBTFNFLAogICAgICAgICAgICAgICAgICAgIHN0cmVhbV9yZXNwb25zZSBCT09MRUFOIERFRkFVTFQgVFJVRQogICAgICAgICAgICAgICAgKQogICAgICAgICAgICAiIiIpCiAgICAgICAgICAgIGF3YWl0IGNvbm4uZXhlY3V0ZSgiIiIKICAgICAgICAgICAgICAgIENSRUFURSBUQUJMRSBJRiBOT1QgRVhJU1RTIGB5ZXNzYWdlX2hpc3RvcnkgKAogICAgICAgICAgICAgICAgICAgIGlkIFNFUklBTCBQUklNQVJZIEtFWSwKICAgICAgICAgICAgICAgICAgICB1c2VyX2lkIEJJR0lOVCBSRUZFUkVOQ0VTIGB1c2VycyD1c2VyX2lkKSwKICAgICAgICAgICAgICAgICAgICByb2xlIFRFWFQsCiAgICAgICAgICAgICAgICAgICAgY29udGVudCBURVhULAogICAgICAgICAgICAgICAgICAgIGhhc19tZWRpYSBCT09MRUFOIERFRkFVTFQgRkFMU0UsCiAgICAgICAgICAgICAgICAgICAgdGltZXN0YW1wIFRJTUVTVEFNUCBERUZBVUxUIENVUlJFTlRfVElNRVNUQU1QCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICIiIikKCiAgICBhc3luYyBkZWYgaW5pdF9zcWxpdGUoc2VsZik6CiAgICAgICAgYXN5bmMgd2l0aCBhaW9zcWxpdGUuY29ubmVjdChEQl9OQU1FKSBhcyBkYjoKICAgICAgICAgICAgYXdhaXQgZGIuZXhlY3V0ZSgiIiIKICAgICAgICAgICAgICAgIENSRUFURSBUQUJMRSBJRiBOT1QgRVhJU1RTIGB1c2VycyAoCiAgICAgICAgICAgICAgICAgICAgdXNlcl9pZCBJTlRFR0VSIFBSSU1BUlkgS0VZLAogICAgICAgICAgICAgICAgICAgIHVzZXJuYW1lIFRFWFQsCiAgICAgICAgICAgICAgICAgICAgc2VsZWN0ZWRfbW9kZWwgVEVYVCBERUZBVUxUICdnZW1pbmktMi41LWZsYXNoJywKICAgICAgICAgICAgICAgICAgICBzeXN0ZW1faW5zdHJ1Y3Rpb24gVEVYVCBERUZBVUxUICfQotGLINC/0L7Qu9C10LfQvdGL0Lkg0Lgg0YPQvNC90YvQuSDQsNGB0YHQuNGB0YLQtdC90YIuJywKICAgICAgICAgICAgICAgICAgICB0ZW1wZXJhdHVyZSBSRUFMIERFRkFVTFQgMC43LAogICAgICAgICAgICAgICAgICAgIG1heF90b2tlbnMgSU5URUdFUiBERUZBVUxUIDQwOTYsCiAgICAgICAgICAgICAgICAgICAgdXNlX3Rvb2xzIEJPT0xFQU4gREVGQVVMVCAwLAogICAgICAgICAgICAgICAgICAgIHN0cmVhbV9yZXNwb25zZSBCT09MRUFOIERFRkFVTFQgMQogICAgICAgICAgICAgICAgKQogICAgICAgICAgICAiIiIpCiAgICAgICAgICAgICMgTWlncmF0aW9ucyBmb3Igc3FsaXRlCiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIGF3YWl0IGRiLmV4ZWN1dGUoIkFMVEVSIFRBQkxFIHVzZXJzIEFERCBDT0xVTU4gc3RyZWFtX3Jlc3BvbnNlIEJPT0xFQU4gREVGQVVMVCAxIikKICAgICAgICAgICAgZXhjZXB0OiBwYXNzCgogICAgICAgICAgICBhd2FpdCBkYi5leGVjdXRlKCIiIgogICAgICAgICAgICAgICAgQ1JFQVRFIFRBQkxFIElGIE5PVCBFWElTVFMgbWVzc2FnZV9oaXN0b3J5ICgKICAgICAgICAgICAgICAgICAgICBpZCBJTlRFR0VSIFBSSU1BUlkgS0VZIEFVVE9JTkNSRU1FTlQsCiAgICAgICAgICAgICAgICAgICAgdXNlcl9pZCBJTlRFR0VSLAogICAgICAgICAgICAgICAgICAgIHJvbGUgVEVYVCwKICAgICAgICAgICAgICAgICAgICBjb250ZW50IFRFWFQsCiAgICAgICAgICAgICAgICAgICAgaGFzX21lZGlhIEJPT0xFQU4gREVGQVVMVCAwLAogICAgICAgICAgICAgICAgICAgIHRpbWVzdGFtcCBEQVRFVElNRSBERUZBVUxUIENVUlJFTlRfVElNRVNUQU1QLAogICAgICAgICAgICAgICAgICAgIEZPUkVJR04gS0VZICh1c2VyX2lkKSBSRUZFUkVOQ0VTIGB1c2VycyAodXNlcl9pZCkKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgIiIiKQogICAgICAgICAgICBhd2FpdCBkYi5jb21taXQoKQoKICAgIGFzeW5jIGRlZiBnZXRfdXNlcl9zZXR0aW5ncyhzZWxmLCB1c2VyX2lkOiBpbnQpOgogICAgICAgIGRlZmF1bHRzID0gewogICAgICAgICAgICAidXNlcl9pZCI6IHVzZXJfaWQsCiAgICAgICAgICAgICJzZWxlY3RlZF9tb2RlbCI6ICJnZW1pbmktMi41LWZsYXNoIiwKICAgICAgICAgICAgInN5c3RlbV9pbnN0cnVjdGlvbiI6ICLQotGLINC/0L7Qu9C10LfQvdGL0Lkg0Lgg0YPQvNC90YvQuSDQsNGB0YHQuNGB0YLQtdC90YIuIiwKICAgICAgICAgICAgInRlbXBlcmF0dXJlIjogMC43LAogICAgICAgICAgICAibWF4X3Rva2VucyI6IDQwOTYsCiAgICAgICAgICAgICJ1c2VfdG9vbHMiOiBGYWxzZSwKICAgICAgICAgICAgInN0cmVhbV9yZXNwb25zZSI6IFRydWUKICAgICAgICB9CgogICAgICAgIGlmIHNlbGYudHlwZSA9PSAicG9zdGdyZXMiOgogICAgICAgICAgICBpZiBub3Qgc2VsZi5wb29sOiBhd2FpdCBzZWxmLmNvbm5lY3QoKQogICAgICAgICAgICBhc3luYyB3aXRoIHNlbGYucG9vbC5hY3F1aXJlKCkgYXMgY29ubjoKICAgICAgICAgICAgICAgIHJvdyA9IGF3YWl0IGNvbm4uZmV0Y2hyb3coIlNFTEVDVCAqIEZST00gdXNlcnMgV0hFUkUgdXNlcl9pZCA9ICQxIiwgdXNlcl9pZCkKICAgICAgICAgICAgICAgIGlmIHJvdzogcmV0dXJuIGRpY3Qocm93KQogICAgICAgICAgICAgICAgYXdhaXQgY29ubi5leGVjdXRlKCJJTlNFUlQgSU5UTyB1c2VycyAodXNlcl9pZCkgVkFMVUVTICgkMSkgT04gQ09ORkxJQ1QgRE8gTk9USElORyIsIHVzZXJfaWQpCiAgICAgICAgICAgICAgICByZXR1cm4gZGVmYXVsdHMKICAgICAgICBlbHNlOgogICAgICAgICAgICBhc3luYyB3aXRoIGFpb3NxbGl0ZS5jb25uZWN0KERCX05BTUUpIGFzIGRiOgogICAgICAgICAgICAgICAgZGIucm93X2ZhY3RvcnkgPSBhaW9zcWxpdGUuUm93CiAgICAgICAgICAgICAgICBhc3luYyB3aXRoIGRiLmV4ZWN1dGUoIlNFTEVDVCAqIEZST00gdXNlcnMgV0hFUkUgdXNlcl9pZCA9ID8iLCAodXNlcl9pZCwpKSBhcyBjdXJzb3I6CiAgICAgICAgICAgICAgICAgICAgcm93ID0gYXdhaXQgY3Vyc29yLmZldGNob25lKCkKICAgICAgICAgICAgICAgICAgICBpZiByb3c6IHJldHVybiBkaWN0KHJvdykKICAgICAgICAgICAgICAgICAgICBhd2FpdCBkYi5leGVjdXRlKCJJTlNFUlQgSU5UTyB1c2VycyAodXNlcl9pZCkgVkFMVUVTICg/KSIsICh1c2VyX2lkLCkpCiAgICAgICAgICAgICAgICAgICAgYXdhaXQgZGIuY29tbWl0KCkKICAgICAgICAgICAgICAgICAgICByZXR1cm4gZGVmYXVsdHMKCiAgICBhc3luYyBkZWYgdXBkYXRlX3VzZXJfc2V0dGluZyhzZWxmLCB1c2VyX2lkOiBpbnQsIHNldHRpbmc6IHN0ciwgdmFsdWUpOgogICAgICAgICMgV2hpdGVsaXN0IGFsbG93ZWQgc2V0dGluZ3MgdG8gcHJldmVudCBTUUwgaW5qZWN0aW9uCiAgICAgICAgYWxsb3dlZF9zZXR0aW5ncyA9IHsKICAgICAgICAgICAgJ3VzZXJuYW1lJywgJ3NlbGVjdGVkX21vZGVsJywgJ3N5c3RlbV9pbnN0cnVjdGlvbicsCiAgICAgICAgICAgICd0ZW1wZXJhdHVyZScsICdtYXhfdG9rZW5zJywgJ3VzZV90b29scycsICdzdHJlYW1fcmVzcG9uc2UnCiAgICAgICAgfQogICAgICAgIAogICAgICAgIGlmIHNldHRpbmcgbm90IGluIGFsbG93ZWRfc2V0dGluZ3M6CiAgICAgICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoZiJJbnZhbGlkIHNldHRpbmc6IHtzZXR0aW5nfSIpCiAgICAgICAgCiAgICAgICAgaWYgc2VsZi50eXBlID09ICJwb3N0Z3JlcyI6CiAgICAgICAgICAgIGlmIG5vdCBzZWxmLnBvb2w6IGF3YWl0IHNlbGYuY29ubmVjdCgpCiAgICAgICAgICAgIGFzeW5jIHdpdGggc2VsZi5wb29sLmFjcXVpcmUoKSBhcyBjb25uOgogICAgICAgICAgICAgICAgIyBQb3N0Z3JlcyBib29sZWFuIGhhbmRsaW5nCiAgICAgICAgICAgICAgICBpZiBzZXR0aW5nIGluIFsndXNlX3Rvb2xzJywgJ3N0cmVhbV9yZXNwb25zZSddOgogICAgICAgICAgICAgICAgICAgIHZhbHVlID0gYm9vbCh2YWx1ZSkKICAgICAgICAgICAgICAgICMgU2FmZTogc2V0dGluZyBpcyB2YWxpZGF0ZWQgZnJvbSB3aGl0ZWxpc3QKICAgICAgICAgICAgICAgIHF1ZXJ5ID0gZiJVUERBVEUgdXNlcnMgU0VUIHN7c2V0dGluZ30gPSAkMSBXSEVSRSB1c2VyX2lkID0gJDIiCiAgICAgICAgICAgICAgICBhd2FpdCBjb25uLmV4ZWN1dGUocXVlcnksIHZhbHVlLCB1c2VyX2lkKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGFzeW5jIHdpdGggYWlvc3FsaXRlLmNvbm5lY3QoREJfTkFNRSkgYXMgZGI6CiAgICAgICAgICAgICAgICAjIFNhZmU6IHNldHRpbmcgaXMgdmFsaWRhdGVkIGZyb20gd2hpdGVsaXN0CiAgICAgICAgICAgICAgICBxdWVyeSA9IGYiVVBEQVRFIHVzZXJzIFNFVCB7c2V0dGluZ30gPSA/IFdIRVJFIHVzZXJfaWQgPSA/IgogICAgICAgICAgICAgICAgYXdhaXQgZGIuZXhlY3V0ZShxdWVyeSwgKHZhbHVlLCB1c2VyX2lkKSkKICAgICAgICAgICAgICAgIGF3YWl0IGRiLmNvbW1pdCgpCgogICAgYXN5bmMgZGVmIHNhdmVfbWVzc2FnZShzZWxmLCB1c2VyX2lkOiBpbnQsIHJvbGU6IHN0ciwgY29udGVudDogc3RyLCBoYXNfbWVkaWE6IGJvb2wgPSBGYWxzZSk6CiAgICAgICAgaWYgc2VsZi50eXBlID09ICJwb3N0Z3JlcyI6CiAgICAgICAgICAgIGlmIG5vdCBzZWxmLnBvb2w6IGF3YWl0IHNlbGYuY29ubmVjdCgpCiAgICAgICAgICAgIGFzeW5jIHdpdGggc2VsZi5wb29sLmFjcXVpcmUoKSBhcyBjb25uOgogICAgICAgICAgICAgICAgYXdhaXQgY29ubi5leGVjdXRlKAogICAgICAgICAgICAgICAgICAgICJJTlNFUlQgSU5UTyBtZXNzYWdlX2hpc3RvcnkgKHVzZXJfaWQsIHJvbGUsIGNvbnRlbnQsIGhhc19tZWRpYSkgVkFMVUVTICgkMSwgJDIsICQzLCAkNCkiLAogICAgICAgICAgICAgICAgICAgIHVzZXJfaWQsIHJvbGUsIGNvbnRlbnQsIGhhc19tZWRpYQogICAgICAgICAgICAgICAgKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGFzeW5jIHdpdGggYWlvc3FsaXRlLmNvbm5lY3QoREJfTkFNRSkgYXMgZGI6CiAgICAgICAgICAgICAgICBhd2FpdCBkYi5leGVjdXRlKAogICAgICAgICAgICAgICAgICAgICJJTlNFUlQgSU5UTyBtZXNzYWdlX2hpc3RvcnkgKHVzZXJfaWQsIHJvbGUsIGNvbnRlbnQsIGhhc19tZWRpYSkgVkFMVUVTICg/LCA/LCA/LCA/KSIsCiAgICAgICAgICAgICAgICAgICAgKHVzZXJfaWQsIHJvbGUsIGNvbnRlbnQsIGhhc19tZWRpYSkKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIGF3YWl0IGRiLmNvbW1pdCgpCgogICAgYXN5bmMgZGVmIGdldF9jaGF0X2hpc3Rvcnkoc2VsZiwgdXNlcl9pZDogaW50LCBsaW1pdDogaW50ID0gMjApOgogICAgICAgIGlmIHNlbGYudHlwZSA9PSAicG9zdGdyZXMiOgogICAgICAgICAgICBpZiBub3Qgc2VsZi5wb29sOiBhd2FpdCBzZWxmLmNvbm5lY3QoKQogICAgICAgICAgICBhc3luYyB3aXRoIHNlbGYucG9vbC5hY3F1aXJlKCkgYXMgY29ubjoKICAgICAgICAgICAgICAgIHJvd3MgPSBhd2FpdCBjb25uLmZldGNoCiAgICAgICAgICAgICAgICAgICAgIlNFTEVDVCByb2xlLCBjb250ZW50IEZST00gbWVzc2FnZV9oaXN0b3J5IFdIRVJFIHVzZXJfaWQgPSAkMSBPUkRFUiBCWSBpZCBERVNDIExJTUlUICQyIiwKICAgICAgICAgICAgICAgICAgICB1c2VyX2lkLCBsaW1pdAogICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgcmV0dXJuIFtkaWN0KHJvdykgZm9yIHJvdyBpbiByZXZlcnNlZChyb3dzKV0KICAgICAgICBlbHNlOgogICAgICAgICAgICBhc3luYyB3aXRoIGFpb3NxbGl0ZS5jb25uZWN0KERCX05BTUUpIGFzIGRiOgogICAgICAgICAgICAgICAgZGIucm93X2ZhY3RvcnkgPSBhaW9zcWxpdGUuUm93CiAgICAgICAgICAgICAgICBhc3luYyB3aXRoIGRiLmV4ZWN1dGUoCiAgICAgICAgICAgICAgICAgICAgIlNFTEVDVCByb2xlLCBjb250ZW50IEZST00gbWVzc2FnZV9oaXN0b3J5IFdIRVJFIHVzZXJfaWQgPSA/IE9SREVSIEJZIGlkIERFU0MgTElNSVQgPyIsCiAgICAgICAgICAgICAgICAgICAgKHVzZXJfaWQsIGxpbWl0KQogICAgICAgICAgICAgICAgKSBhcyBjdXJzb3I6CiAgICAgICAgICAgICAgICAgICAgcm93cyA9IGF3YWl0IGN1cnNvci5mZXRjaGFsbCgpCiAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFtkaWN0KHJvdykgZm9yIHJvdyBpbiByZXZlcnNlZChyb3dzKV0KCiAgICBhc3luYyBkZWYgY2xlYXJfaGlzdG9yeShzZWxmLCB1c2VyX2lkOiBpbnQpOgogICAgICAgIGlmIHNlbGYudHlwZSA9PSAicG9zdGdyZXMiOgogICAgICAgICAgICBpZiBub3Qgc2VsZi5wb29sOiBhd2FpdCBzZWxmLmNvbm5lY3QoKQogICAgICAgICAgICBhc3luYyB3aXRoIHNlbGYucG9vbC5hY3F1aXJlKCkgYXMgY29ubjoKICAgICAgICAgICAgICAgIGF3YWl0IGNvbm4uZXhlY3V0ZSgiREVMRVRFIEZST00gbWVzc2FnZV9oaXN0b3J5IFdIRVJFIHVzZXJfaWQgPSAkMSIsIHVzZXJfaWQpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgYXN5bmMgd2l0aCBhaW9zcWxpdGUuY29ubmVjdChEQl9OQU1FKSBhcyBkYjoKICAgICAgICAgICAgICAgIGF3YWl0IGRiLmV4ZWN1dGUoIkRFTEVURSBGUk9NIG1lc3NhZ2VfaGlzdG9yeSBXSEVSRSB1c2VyX2lkID0gPyIsICh1c2VyX2lkLCkpCiAgICAgICAgICAgICAgICBhd2FpdCBkYi5jb21taXQoKQoKIyBTaW5nbGV0b24gaW5zdGFuY2UKZGJfaW5zdGFuY2UgPSBEYXRhYmFzZSgpCgojIFdyYXBwZXIgZnVuY3Rpb25zIGZvciBjb21wYXRpYmlsaXR5CmFzeW5jIGRlZiBpbml0X2RiKCk6CiAgICBhd2FpdCBkYl9pbnN0YW5jZS5jb25uZWN0KCkKCmFzeW5jIGRlZiBnZXRfdXNlcl9zZXR0aW5ncyh1c2VyX2lkKToKICAgIHJldHVybiBhd2FpdCBkYl9pbnN0YW5jZS5nZXRfdXNlcl9zZXR0aW5ncyh1c2VyX2lkKQoKYXN5bmMgZGVmIHVwZGF0ZV91c2VyX3NldHRpbmcodXNlcl9pZCwgc2V0dGluZywgdmFsdWUpOgogICAgYXdhaXQgZGJfaW5zdGFuY2UudXBkYXRlX3VzZXJfc2V0dGluZyh1c2VyX2lkLCBzZXR0aW5nLCB2YWx1ZSkKCmFzeW5jIGRlZiBzYXZlX21lc3NhZ2UodXNlcl9pZCwgcm9sZSwgY29udGVudCwgaGFzX21lZGlhPUZhbHNlKToKICAgIGF3YWl0IGRiX2luc3RhbmNlLnNhdmVfbWVzc2FnZSh1c2VyX2lkLCByb2xlLCBjb250ZW50LCBoYXNfbWVkaWEpCgphc3luYyBkZWYgZ2V0X2NoYXRfaGlzdG9yeSh1c2VyX2lkLCBsaW1pdD0yMCk6CiAgICByZXR1cm4gYXdhaXQgZGJfaW5zdGFuY2UuZ2V0X2NoYXRfaGlzdG9yeSh1c2VyX2lkLCBsaW1pdCkKCmFzeW5jIGRlZiBjbGVhcl9oaXN0b3J5KHVzZXJfaWQpOgogICAgYXdhaXQgZGJfaW5zdGFuY2UuY2xlYXJfaGlzdG9yeSh1c2VyX2lkKQo=
+import os
+import aiosqlite
+import asyncpg
+import logging
+from datetime import datetime
+
+# –ù–∞—Å—Ç—Ä–æ–π–∫–∏
+DB_NAME = "bot_database.db"
+DATABASE_URL = os.getenv("DATABASE_URL") # Railway –ø—Ä–µ–¥–æ—Å—Ç–∞–≤–ª—è–µ—Ç —ç—Ç—É –ø–µ—Ä–µ–º–µ–Ω–Ω—É—é –¥–ª—è Postgres
+
+logger = logging.getLogger(__name__)
+
+class Database:
+    def __init__(self):
+        self.type = "postgres" if DATABASE_URL else "sqlite"
+        self.pool = None
+
+    async def connect(self):
+        if self.type == "postgres":
+            try:
+                self.pool = await asyncpg.create_pool(DATABASE_URL)
+                logger.info("Connected to PostgreSQL")
+                await self.init_postgres()
+            except Exception as e:
+                logger.error(f"Postgres connection failed: {e}. Falling back to SQLite.")
+                self.type = "sqlite"
+        
+        if self.type == "sqlite":
+            logger.info("Using SQLite")
+            await self.init_sqlite()
+
+    async def init_postgres(self):
+        async with self.pool.acquire() as conn:
+            await conn.execute("""
+                CREATE TABLE IF NOT EXISTS susers (
+                    user_id BIGINT PRIMARY KEY,
+                    username TEXT,
+                    selected_model TEXT DEFAULT 'gemini-2.5-flash',
+                    system_instruction TEXT DEFAULT '–¢—ã 0ø–æ–ª–µ–∑–Ω—ã–π –∏ —É–º–Ω—ã–π –∞—Å—Å–∏—Å—Ç–µ–Ω—Ç.',
+                    temperature REAL DEFAULT 0.7,
+                    max_tokens INTEGER DEEAULT4Mãà\ŸW›€€»ì””PSàQêUSêS—Kà›ôX[W‹ô\‹€úŸHì””PSàQêUSïQBà
+BàààäBà]ÿZ]€€õãô^X›]JààÇà‘ëPUHPìHQàì’VT’»Y\‹ÿYŸW⁄\›‹ûH
+àY—TíPSíSPTñH—VKà\Ÿ\ó⁄YíQ“SïëQëTëSê—T»\Ÿ\ú»=\Ÿ\ó⁄Y
+Kàõ€HVà€€ù[ùVà\◊€YYXHì””PSàQêUSêS—Kà[Y\›[\SQT’STQêUS’TîëSï’SQT’STà
+BàààäBÇà\ﬁ[ò»Yà[ö]‹‹[]JŸ[äNÇà\ﬁ[ò»⁄]Z[‹‹[]Kò€€õôX›
+ó”êSQJH\»éÇà]ÿZ]ãô^X›]JààÇà‘ëPUHPìHQàì’VT’»\Ÿ\ú»
+à\Ÿ\ó⁄YSïQ—TàíSPTñH—VKà\Ÿ\õò[YHVàŸ[X›Y€[Ÿ[VQêUS	ŸŸ[Z[öKLãçKYõ\⁄	Ààﬁ\›[W⁄[ú›ùX›[€àVQêUS	Ù(¥b»4/Ù/¥.Ù-t-Ù/tbÙ.H4.4`Ù/4/tbÙ.H4,4`t`t.4`t`¥-t/t`ãâÀà[\\ò]\ôHëPSQêUSçÀàX^›⁄Ÿ[ú»SïQ—TàQêUSMãà\ŸW›€€»ì””PSàQêUSà›ôX[W‹ô\‹€úŸHì””PSàQêUSBà
+BàààäBà»ZY‹ò][€ú»õ‹à‹[]BàûNÇà]ÿZ]ãô^X›]JêSTàPìH\Ÿ\ú»Q””SSà›ôX[W‹ô\‹€úŸHì””PSàQêUSHäBà^Ÿ\à\‹¬Çà]ÿZ]ãô^X›]JààÇà‘ëPUHPìHQàì’VT’»Y\‹ÿYŸW⁄\›‹ûH
+àYSïQ—TàíSPTñH—VHUU“Sê‘ëSQSïà\Ÿ\ó⁄YSïQ—Tãàõ€HVà€€ù[ùVà\◊€YYXHì””PSàQêUSà[Y\›[\UUSQHQêUS’TîëSï’SQT’STàì‘ëRQ”à—VH
+\Ÿ\ó⁄Y
+HëQëTëSê—T»\Ÿ\ú»
+\Ÿ\ó⁄Y
+Bà
+BàààäBà]ÿZ]ãò€€[Z]
+
+BÇà\ﬁ[ò»YàŸ]›\Ÿ\ó‹Ÿ][ô‹ Ÿ[ã\Ÿ\ó⁄Yà[ù
+NÇàYò][»H¬àù\Ÿ\ó⁄Yéà\Ÿ\ó⁄YàúŸ[X›Y€[Ÿ[éàôŸ[Z[öKLãçKYõ\⁄ãàúﬁ\›[W⁄[ú›ùX›[€àéà¥(¥b»4/Ù/¥.Ù-t-Ù/tbÙ.H4.4`Ù/4/tbÙ.H4,4`t`t.4`t`¥-t/t`ãàãàù[\\ò]\ôHéàçÀàõX^›⁄Ÿ[ú»éàMãàù\ŸW›€€»éàò[ŸKàú›ôX[W‹ô\‹€úŸHéàùYBàBÇàYàŸ[ãù\HOHú‹›‹ô\»éÇàYàõ›Ÿ[ãú€€à]ÿZ]Ÿ[ãò€€õôX›
+
+Bà\ﬁ[ò»⁄]Ÿ[ãú€€òX‹]Z\ôJ
+H\»€€õéÇàõ›»H]ÿZ]€€õãôô]⁄õ› î—SP’
+àîì”H\Ÿ\ú»“TëH\Ÿ\ó⁄YH	Hã\Ÿ\ó⁄Y
+BàYàõ›Œàô]\õàX›
+õ› Bà]ÿZ]€€õãô^X›]JíSî—TïSï»\Ÿ\ú»
+\Ÿ\ó⁄Y
+HêSQT»
+	JH”à””ëìP’»ì’Së»ã\Ÿ\ó⁄Y
+Bàô]\õàYò][¬à[ŸNÇà\ﬁ[ò»⁄]Z[‹‹[]Kò€€õôX›
+ó”êSQJH\»éÇàãúõ›◊ŸòX›‹ûHHZ[‹‹[]Kîõ›¬à\ﬁ[ò»⁄]ãô^X›]Jî—SP’
+àîì”H\Ÿ\ú»“TëH\Ÿ\ó⁄YH»ã
+\Ÿ\ó⁄Y
+JH\»›\ú€‹éÇàõ›»H]ÿZ]›\ú€‹ãôô]⁄€ôJ
+BàYàõ›Œàô]\õàX›
+õ› Bà]ÿZ]ãô^X›]JíSî—TïSï»\Ÿ\ú»
+\Ÿ\ó⁄Y
+HêSQT»
+ Hã
+\Ÿ\ó⁄Y
+JBà]ÿZ]ãò€€[Z]
+
+Bàô]\õàYò][¬Çà\ﬁ[ò»Yà\]W›\Ÿ\ó‹Ÿ][ô Ÿ[ã\Ÿ\ó⁄Yà[ùŸ][ôŒà›ãò[YJNÇà»⁄][\›[›ŸYŸ][ô‹»»ô]ô[ù‘S[öôX›[€Çà[›ŸY‹Ÿ][ô‹»H¬à	›\Ÿ\õò[YIÀ	‹Ÿ[X›Y€[Ÿ[	À	‹ﬁ\›[W⁄[ú›ùX›[€âÀà	›[\\ò]\ôIÀ	€X^›⁄Ÿ[ú…À	›\ŸW›€€…À	‹›ôX[W‹ô\‹€úŸI¬àBààYàŸ][ô»õ›[à[›ŸY‹Ÿ][ô‹ŒÇàòZ\ŸHò[YQ\úõ‹äàí[ùò[YŸ][ôŒà‹Ÿ][ôﬂHäBààYàŸ[ãù\HOHú‹›‹ô\»éÇàYàõ›Ÿ[ãú€€à]ÿZ]Ÿ[ãò€€õôX›
+
+Bà\ﬁ[ò»⁄]Ÿ[ãú€€òX‹]Z\ôJ
+H\»€€õéÇà»‹›‹ô\»õ€€X[à[ô[ô¬àYàŸ][ô»[à…›\ŸW›€€…À	‹›ôX[W‹ô\‹€úŸI◊NÇàò[YHHõ€€
+ò[YJBà»ÿYôNàŸ][ô»\»ò[Y]Yúõ€H⁄][\›à]Y\ûHHàïTUH\Ÿ\ú»—Uﬁ‹Ÿ][ôﬂHH	H“TëH\Ÿ\ó⁄YH	àÇà]ÿZ]€€õãô^X›]J]Y\ûKò[YK\Ÿ\ó⁄Y
+Bà[ŸNÇà\ﬁ[ò»⁄]Z[‹‹[]Kò€€õôX›
+ó”êSQJH\»éÇà»ÿYôNàŸ][ô»\»ò[Y]Yúõ€H⁄][\›à]Y\ûHHàïTUH\Ÿ\ú»—U‹Ÿ][ôﬂHH»“TëH\Ÿ\ó⁄YH»Çà]ÿZ]ãô^X›]J]Y\ûK
+ò[YK\Ÿ\ó⁄Y
+JBà]ÿZ]ãò€€[Z]
+
+BÇà\ﬁ[ò»Yàÿ]ôW€Y\‹ÿYŸJŸ[ã\Ÿ\ó⁄Yà[ùõ€Nà›ã€€ù[ùà›ã\◊€YYXNàõ€€Hò[ŸJNÇàYàŸ[ãù\HOHú‹›‹ô\»éÇàYàõ›Ÿ[ãú€€à]ÿZ]Ÿ[ãò€€õôX›
+
+Bà\ﬁ[ò»⁄]Ÿ[ãú€€òX‹]Z\ôJ
+H\»€€õéÇà]ÿZ]€€õãô^X›]JàíSî—TïSï»Y\‹ÿYŸW⁄\›‹ûH
+\Ÿ\ó⁄Yõ€K€€ù[ù\◊€YYXJHêSQT»
+	K	ã	À	
+Hãà\Ÿ\ó⁄Yõ€K€€ù[ù\◊€YYXBà
+Bà[ŸNÇà\ﬁ[ò»⁄]Z[‹‹[]Kò€€õôX›
+ó”êSQJH\»éÇà]ÿZ]ãô^X›]JàíSî—TïSï»Y\‹ÿYŸW⁄\›‹ûH
+\Ÿ\ó⁄Yõ€K€€ù[ù\◊€YYXJHêSQT»
+ÀÀÀ Hãà
+\Ÿ\ó⁄Yõ€K€€ù[ù\◊€YYXJBà
+Bà]ÿZ]ãò€€[Z]
+
+BÇà\ﬁ[ò»YàŸ]ÿ⁄]⁄\›‹ûJŸ[ã\Ÿ\ó⁄Yà[ù[Z]à[ùHå
+NÇàYàŸ[ãù\HOHú‹›‹ô\»éÇàYàõ›Ÿ[ãú€€à]ÿZ]Ÿ[ãò€€õôX›
+
+Bà\ﬁ[ò»⁄]Ÿ[ãú€€òX‹]Z\ôJ
+H\»€€õéÇàõ›‹»H]ÿZ]€€õãôô]⁄àî—SP’õ€K€€ù[ùîì”HY\‹ÿYŸW⁄\›‹ûH“TëH\Ÿ\ó⁄YH	H‘ëTàñHYT–»SRU	àãà\Ÿ\ó⁄Y[Z]à
+Bàô]\õàŸX›
+õ› Hõ‹àõ›»[àô]ô\úŸY
+õ›‹ WBà[ŸNÇà\ﬁ[ò»⁄]Z[‹‹[]Kò€€õôX›
+ó”êSQJH\»éÇàãúõ›◊ŸòX›‹ûHHZ[‹‹[]Kîõ›¬à\ﬁ[ò»⁄]ãô^X›]Jàî—SP’õ€K€€ù[ùîì”HY\‹ÿYŸW⁄\›‹ûH“TëH\Ÿ\ó⁄YH»‘ëTàñHYT–»SRU»ãà
+\Ÿ\ó⁄Y[Z]
+Bà
+H\»›\ú€‹éÇàõ›‹»H]ÿZ]›\ú€‹ãôô]⁄[
+
+Bàô]\õàŸX›
+õ› Hõ‹àõ›»[àô]ô\úŸY
+õ›‹ WBÇà\ﬁ[ò»Yà€X\ó⁄\›‹ûJŸ[ã\Ÿ\ó⁄Yà[ù
+NÇàYàŸ[ãù\HOHú‹›‹ô\»éÇàYàõ›Ÿ[ãú€€à]ÿZ]Ÿ[ãò€€õôX›
+
+Bà\ﬁ[ò»⁄]Ÿ[ãú€€òX‹]Z\ôJ
+H\»€€õéÇà]ÿZ]€€õãô^X›]JëSUHîì”HY\‹ÿYŸW⁄\›‹ûH“TëH\Ÿ\ó⁄YH	Hã\Ÿ\ó⁄Y
+Bà[ŸNÇà\ﬁ[ò»⁄]Z[‹‹[]Kò€€õôX›
+ó”êSQJH\»éÇà]ÿZ]ãô^X›]JëSUHîì”HY\‹ÿYŸW⁄\›‹ûH“TëH\Ÿ\ó⁄YH»ã
+\Ÿ\ó⁄Y
+JBà]ÿZ]ãò€€[Z]
+
+BÇà»⁄[ô€]€à[ú›[òŸBôó⁄[ú›[òŸHH]Xò\ŸJ
+BÇà»‹ò\\àù[ò›[€ú»õ‹à€€\]Xö[]Bò\ﬁ[ò»Yà[ö]Ÿä
+NÇà]ÿZ]ó⁄[ú›[òŸKò€€õôX›
+
+BÇò\ﬁ[ò»YàŸ]›\Ÿ\ó‹Ÿ][ô‹ \Ÿ\ó⁄Y
+NÇàô]\õà]ÿZ]ó⁄[ú›[òŸKôŸ]›\Ÿ\ó‹Ÿ][ô‹ \Ÿ\ó⁄Y
+BÇò\ﬁ[ò»Yà\]W›\Ÿ\ó‹Ÿ][ô \Ÿ\ó⁄YŸ][ôÀò[YJNÇà]ÿZ]ó⁄[ú›[òŸKù\]W›\Ÿ\ó‹Ÿ][ô \Ÿ\ó⁄YŸ][ôÀò[YJBÇò\ﬁ[ò»Yàÿ]ôW€Y\‹ÿYŸJ\Ÿ\ó⁄Yõ€K€€ù[ù\◊€YYXOQò[ŸJNÇà]ÿZ]ó⁄[ú›[òŸKúÿ]ôW€Y\‹ÿYŸJ\Ÿ\ó⁄Yõ€K€€ù[ù\◊€YYXJBÇò\ﬁ[ò»YàŸ]ÿ⁄]⁄\›‹ûJ\Ÿ\ó⁄Y[Z]Lå
+NÇàô]\õà]ÿZ]ó⁄[ú›[òŸKôŸ]ÿ⁄]⁄\›‹ûJ\Ÿ\ó⁄Y[Z]
+BÇò\ﬁ[ò»Yà€X\ó⁄\›‹ûJ\Ÿ\ó⁄Y
+NÇà]ÿZ]ó⁄[ú›[òŸKò€X\ó⁄\›‹ûJ\Ÿ\ó⁄Y
