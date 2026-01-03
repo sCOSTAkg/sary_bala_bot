@@ -26,8 +26,9 @@ def clear_temp_folder():
     files = glob.glob(os.path.join(temp_dir, "*"))
     for f in files:
         try:
-            os.remove(f)
-            logger.info(f"Deleted temp file: {f}")
+            if os.path.isfile(f):
+                os.remove(f)
+                logger.info(f"Deleted temp file: {f}")
         except Exception as e:
             logger.error(f"Error deleting {f}: {e}")
 

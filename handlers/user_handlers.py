@@ -104,6 +104,7 @@ async def handle_response_stream(message: Message, prompt: str, images: list = N
     
     last_text = ""
     last_update_time = 0
+    chunk_text = ""
     import time
     
     try:
