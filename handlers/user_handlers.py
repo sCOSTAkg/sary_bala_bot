@@ -124,17 +124,11 @@ async def handle_response_stream(message: Message, prompt: str, images: list = N
                     pass 
             
         # Финальное обновление
-        if last_text != chunk_text:
-            try:
-                await answer_msg.edit_text(chunk_text, parse_mode="Markdown")
-            except Exception:
-                # Если Markdown сломался, отправляем как есть
-                await answer_msg.edit_text(chunk_text, parse_mode=None)
-        else:
-            try:
-                await answer_msg.edit_text(chunk_text, parse_mode="Markdown")
-            except Exception:
-                await answer_msg.edit_text(chunk_text, parse_mode=None)
+        try:
+            await answer_msg.edit_text(chunk_text, parse_mode="Markdown")
+        except Exception:
+            # Если Markdown сломался, отправляем как есть
+            await answer_msg.edit_text(chunk_text, parse_mode=None)
             
     except Exception as e:
         logger.error(f"Handler error: {e}")
