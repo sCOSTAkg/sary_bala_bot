@@ -46,7 +46,10 @@ async def about(message: Message):
         f"Стриминг: {'Вкл 🌊' if settings.get('stream_response') else 'Выкл 🛑'}\n"
         f"Инструменты: {'Вкл 🛠' if settings['use_tools'] else 'Выкл'}\n"
     )
-    await message.answer(text, parse_mode="Markdown")
+    try:
+        await message.answer(text, parse_mode="Markdown")
+    except Exception:
+         await message.answer(text, parse_mode=None)
 
 @router.message(F.content_type.in_({'voice', 'audio'}))
 async def voice_handler(message: Message, bot: Bot):
@@ -121,9 +124,16 @@ async def handle_response_stream(message: Message, prompt: str, images: list = N
             
         # Финальное обновление
         if last_text != chunk_text:
-            await answer_msg.edit_text(chunk_text, parse_mode="Markdown")
+            try:
+                await answer_msg.edit_text(chunk_text, parse_mode="Markdown")
+            except Exception:
+                # Если Markdown сломался, отправляем как есть
+                await answer_msg.edit_text(chunk_text, parse_mode=None)
         else:
-            await answer_msg.edit_text(chunk_text, parse_mode="Markdown")
+            try:
+                await answer_msg.edit_text(chunk_text, parse_mode="Markdown")
+            except Exception:
+                await answer_msg.edit_text(chunk_text, parse_mode=None)
             
     except Exception as e:
         logger.error(f"Handler error: {e}")

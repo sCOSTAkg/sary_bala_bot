@@ -1,7 +1,8 @@
-# Обновляем main.py чтобы он просто запускался и держал connection
 import asyncio
 import logging
 import sys
+import os
+import glob
 from aiogram import Bot, Dispatcher
 from config import BOT_TOKEN
 from handlers import user_handlers, settings_handlers
@@ -15,6 +16,21 @@ logging.basicConfig(
 )
 logger = logging.getLogger("main")
 
+def clear_temp_folder():
+    """Очищает папку temp при запуске"""
+    temp_dir = "temp"
+    if not os.path.exists(temp_dir):
+        os.makedirs(temp_dir)
+        return
+
+    files = glob.glob(os.path.join(temp_dir, "*"))
+    for f in files:
+        try:
+            os.remove(f)
+            logger.info(f"Deleted temp file: {f}")
+        except Exception as e:
+            logger.error(f"Error deleting {f}: {e}")
+
 async def main():
     logger.info("Initializing database...")
     
@@ -26,6 +42,9 @@ async def main():
         logger.error(f"Database initialization failed: {e}")
         logger.error("Bot cannot start without database. Exiting...")
         sys.exit(1)
+    
+    # Очистка временных файлов
+    clear_temp_folder()
     
     logger.info("Starting bot...")
     bot = Bot(token=BOT_TOKEN)
