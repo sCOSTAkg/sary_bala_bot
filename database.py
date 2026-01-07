@@ -4,9 +4,9 @@ import asyncpg
 import logging
 from datetime import datetime
 
-# ĞĞ°ÑÑ‚Ñ€Ğ¾Ğ¹ĞºĞ¸
+# Database setup
 DB_NAME = "bot_database.db"
-DATABASE_URL = os.getenv("DATABASE_URL") # Railway Ğ¿Ñ€ĞµĞ´Ğ¾ÑÑ‚Ğ°Ğ²Ğ»ÑĞµÑ‚ ÑÑ‚Ñƒ Ğ¿ĞµÑ€ĞµĞ¼ĞµĞ½Ğ½ÑƒÑ Ğ´Ğ»Ñ Postgres
+DATABASE_URL = os.getenv("DATABASE_URL") # Railway Postgres URL
 
 logger = logging.getLogger(__name__)
 
@@ -32,107 +32,162 @@ class Database:
     async def init_postgres(self):
         async with self.pool.acquire() as conn:
             await conn.execute("""
-                CREATE TABLE IF NOT EXISTS susers (
+                CREATE TABLE IF NOT EXISTS users (
                     user_id BIGINT PRIMARY KEY,
                     username TEXT,
-                    selected_model TEXT DEFAULT 'gemini-2.5-flash',
-                    system_instruction TEXT DEFAULT 'Ğ¢Ñ‹ 0¿Ğ¾Ğ»ĞµĞ·Ğ½Ñ‹Ğ¹ Ğ¸ ÑƒĞ¼Ğ½Ñ‹Ğ¹ Ğ°ÑÑĞ¸ÑÑ‚ĞµĞ½Ñ‚.',
+                    selected_model TEXT DEFAULT 'gemini-1.5-flash',
+                    system_instruction TEXT DEFAULT 'Ğ¢Ñ‹ â€” ÑƒĞ¼Ğ½Ñ‹Ğ¹ Ğ¸ Ğ¿Ğ¾Ğ»ĞµĞ·Ğ½Ñ‹Ğ¹ Ğ°ÑÑĞ¸ÑÑ‚ĞµĞ½Ñ‚.',
                     temperature REAL DEFAULT 0.7,
-                    max_tokens INTEGER DEEAULT4M‹ˆ\ÙWİÛÛÈ“ÓÓPSˆQUSSÑKˆİ™X[WÜ™\ÜÛœÙH“ÓÓPSˆQUS•QBˆ
-BˆˆˆŠBˆ]ØZ]ÛÛ›‹™^Xİ]Jˆˆ‚ˆÔ‘PUHP“HQˆ“ÕVTÕÈY\ÜØYÙWÚ\İÜH
-ˆYÑT’PS’SPT–HÑVKˆ\Ù\—ÚY’QÒS•‘Q‘T‘SÑTÈ\Ù\œÈ=\Ù\—ÚY
-Kˆ›ÛHVˆÛÛ[Vˆ\×ÛYYXH“ÓÓPSˆQUSSÑKˆ[Y\İ[\SQTÕSTQUSÕT”‘S•ÕSQTÕSTˆ
-BˆˆˆŠB‚ˆ\Ş[˜ÈYˆ[š]ÜÜ[]JÙ[ŠN‚ˆ\Ş[˜ÈÚ]Z[ÜÜ[]K˜ÛÛ›™Xİ
-—ÓSQJH\È‚ˆ]ØZ]‹™^Xİ]Jˆˆ‚ˆÔ‘PUHP“HQˆ“ÕVTÕÈ\Ù\œÈ
-ˆ\Ù\—ÚYS•QÑTˆ’SPT–HÑVKˆ\Ù\›˜[YHVˆÙ[XİYÛ[Ù[VQUS	ÙÙ[Z[šKL‹KY›\Ú	ËˆŞ\İ[WÚ[œİXİ[ÛˆVQUS	ô(´bÈ4/ô/´.ô-t-ô/tbô.H4.4`ô/4/tbô.H4,4`t`t.4`t`´-t/t`‹‰Ëˆ[\\˜]\™H‘PSQUSËˆX^İÚÙ[œÈS•QÑTˆQUSM‹ˆ\ÙWİÛÛÈ“ÓÓPSˆQUSˆİ™X[WÜ™\ÜÛœÙH“ÓÓPSˆQUSBˆ
-BˆˆˆŠBˆÈZYÜ˜][ÛœÈ›ÜˆÜ[]BˆN‚ˆ]ØZ]‹™^Xİ]JSTˆP“H\Ù\œÈQÓÓSSˆİ™X[WÜ™\ÜÛœÙH“ÓÓPSˆQUSHŠBˆ^Ù\ˆ\ÜÂ‚ˆ]ØZ]‹™^Xİ]Jˆˆ‚ˆÔ‘PUHP“HQˆ“ÕVTÕÈY\ÜØYÙWÚ\İÜH
-ˆYS•QÑTˆ’SPT–HÑVHUUÒSÔ‘SQS•ˆ\Ù\—ÚYS•QÑT‹ˆ›ÛHVˆÛÛ[Vˆ\×ÛYYXH“ÓÓPSˆQUSˆ[Y\İ[\UUSQHQUSÕT”‘S•ÕSQTÕSTˆ“Ô‘RQÓˆÑVH
-\Ù\—ÚY
-H‘Q‘T‘SÑTÈ\Ù\œÈ
-\Ù\—ÚY
-Bˆ
-BˆˆˆŠBˆ]ØZ]‹˜ÛÛ[Z]
+                    max_tokens INTEGER DEFAULT 2048,
+                    use_tools BOOLEAN DEFAULT FALSE,
+                    stream_response BOOLEAN DEFAULT TRUE
+                )
+            """)
+            await conn.execute("""
+                CREATE TABLE IF NOT EXISTS message_history (
+                    id SERIAL PRIMARY KEY,
+                    user_id BIGINT REFERENCES users(user_id),
+                    role TEXT,
+                    content TEXT,
+                    has_media BOOLEAN DEFAULT FALSE,
+                    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+            """)
 
-B‚ˆ\Ş[˜ÈYˆÙ]İ\Ù\—ÜÙ][™ÜÊÙ[‹\Ù\—ÚYˆ[
-N‚ˆY˜][ÈHÂˆ\Ù\—ÚYˆ\Ù\—ÚYˆœÙ[XİYÛ[Ù[ˆ™Ù[Z[šKL‹KY›\Ú‹ˆœŞ\İ[WÚ[œİXİ[Ûˆˆ´(´bÈ4/ô/´.ô-t-ô/tbô.H4.4`ô/4/tbô.H4,4`t`t.4`t`´-t/t`‹ˆ‹ˆ[\\˜]\™HˆËˆ›X^İÚÙ[œÈˆM‹ˆ\ÙWİÛÛÈˆ˜[ÙKˆœİ™X[WÜ™\ÜÛœÙHˆYBˆB‚ˆYˆÙ[‹\HOHœÜİÜ™\È‚ˆYˆ›İÙ[‹œÛÛˆ]ØZ]Ù[‹˜ÛÛ›™Xİ
+    async def init_sqlite(self):
+        async with aiosqlite.connect(DB_NAME) as db:
+            await db.execute("""
+                CREATE TABLE IF NOT EXISTS users (
+                    user_id INTEGER PRIMARY KEY,
+                    username TEXT,
+                    selected_model TEXT DEFAULT 'gemini-1.5-flash',
+                    system_instruction TEXT DEFAULT 'Ğ¢Ñ‹ â€” ÑƒĞ¼Ğ½Ñ‹Ğ¹ Ğ¸ Ğ¿Ğ¾Ğ»ĞµĞ·Ğ½Ñ‹Ğ¹ Ğ°ÑÑĞ¸ÑÑ‚ĞµĞ½Ñ‚.',
+                    temperature REAL DEFAULT 0.7,
+                    max_tokens INTEGER DEFAULT 2048,
+                    use_tools BOOLEAN DEFAULT FALSE,
+                    stream_response BOOLEAN DEFAULT TRUE
+                )
+            """)
+            
+            # Check for missing columns in existing table (Migration)
+            try:
+                await db.execute("ALTER TABLE users ADD COLUMN stream_response BOOLEAN DEFAULT 1")
+            except:
+                pass
 
-Bˆ\Ş[˜ÈÚ]Ù[‹œÛÛ˜XÜ]Z\™J
-H\ÈÛÛ›‚ˆ›İÈH]ØZ]ÛÛ›‹™™]Ú›İÊ”ÑSPÕ
-ˆ”“ÓH\Ù\œÈÒT‘H\Ù\—ÚYH	H‹\Ù\—ÚY
-BˆYˆ›İÎˆ™]\›ˆXİ
-›İÊBˆ]ØZ]ÛÛ›‹™^Xİ]J’S”ÑT•S•È\Ù\œÈ
-\Ù\—ÚY
-HSQTÈ
-	JHÓˆÓÓ‘“PÕÈ“ÕS‘È‹\Ù\—ÚY
-Bˆ™]\›ˆY˜][Âˆ[ÙN‚ˆ\Ş[˜ÈÚ]Z[ÜÜ[]K˜ÛÛ›™Xİ
-—ÓSQJH\È‚ˆ‹œ›İ×Ù˜XİÜHHZ[ÜÜ[]K”›İÂˆ\Ş[˜ÈÚ]‹™^Xİ]J”ÑSPÕ
-ˆ”“ÓH\Ù\œÈÒT‘H\Ù\—ÚYHÈ‹
-\Ù\—ÚY
-JH\Èİ\œÛÜ‚ˆ›İÈH]ØZ]İ\œÛÜ‹™™]ÚÛ™J
-BˆYˆ›İÎˆ™]\›ˆXİ
-›İÊBˆ]ØZ]‹™^Xİ]J’S”ÑT•S•È\Ù\œÈ
-\Ù\—ÚY
-HSQTÈ
-ÊH‹
-\Ù\—ÚY
-JBˆ]ØZ]‹˜ÛÛ[Z]
+            await db.execute("""
+                CREATE TABLE IF NOT EXISTS message_history (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    user_id INTEGER REFERENCES users(user_id),
+                    role TEXT,
+                    content TEXT,
+                    has_media BOOLEAN DEFAULT 0,
+                    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+                )
+            """)
+            await db.commit()
 
-Bˆ™]\›ˆY˜][Â‚ˆ\Ş[˜ÈYˆ\]Wİ\Ù\—ÜÙ][™ÊÙ[‹\Ù\—ÚYˆ[Ù][™Îˆİ‹˜[YJN‚ˆÈÚ][\İ[İÙYÙ][™ÜÈÈ™]™[ÔS[š™Xİ[Û‚ˆ[İÙYÜÙ][™ÜÈHÂˆ	İ\Ù\›˜[YIË	ÜÙ[XİYÛ[Ù[	Ë	ÜŞ\İ[WÚ[œİXİ[Û‰Ëˆ	İ[\\˜]\™IË	ÛX^İÚÙ[œÉË	İ\ÙWİÛÛÉË	Üİ™X[WÜ™\ÜÛœÙIÂˆBˆˆYˆÙ][™È›İ[ˆ[İÙYÜÙ][™ÜÎ‚ˆ˜Z\ÙH˜[YQ\œ›ÜŠˆ’[˜[YÙ][™ÎˆÜÙ][™ßHŠBˆˆYˆÙ[‹\HOHœÜİÜ™\È‚ˆYˆ›İÙ[‹œÛÛˆ]ØZ]Ù[‹˜ÛÛ›™Xİ
+    async def get_user_settings(self, user_id):
+        if self.type == "postgres":
+            async with self.pool.acquire() as conn:
+                row = await conn.fetchrow("SELECT * FROM users WHERE user_id = $1", user_id)
+                if row: return dict(row)
+        else:
+            async with aiosqlite.connect(DB_NAME) as db:
+                db.row_factory = aiosqlite.Row
+                async with db.execute("SELECT * FROM users WHERE user_id = ?", (user_id,)) as cursor:
+                    row = await cursor.fetchone()
+                    if row: return dict(row)
+        
+        # Default settings if user not found
+        return {
+            "user_id": user_id,
+            "selected_model": "gemini-1.5-flash-latest",
+            "system_instruction": "Ğ¢Ñ‹ â€” ÑƒĞ¼Ğ½Ñ‹Ğ¹ Ğ¸ Ğ¿Ğ¾Ğ»ĞµĞ·Ğ½Ñ‹Ğ¹ Ğ°ÑÑĞ¸ÑÑ‚ĞµĞ½Ñ‚.",
+            "temperature": 0.7,
+            "max_tokens": 2048,
+            "use_tools": False,
+            "stream_response": True
+        }
 
-Bˆ\Ş[˜ÈÚ]Ù[‹œÛÛ˜XÜ]Z\™J
-H\ÈÛÛ›‚ˆÈÜİÜ™\È›ÛÛX[ˆ[™[™ÂˆYˆÙ][™È[ˆÉİ\ÙWİÛÛÉË	Üİ™X[WÜ™\ÜÛœÙI×N‚ˆ˜[YHH›ÛÛ
-˜[YJBˆÈØY™NˆÙ][™È\È˜[Y]Yœ›ÛHÚ][\İˆ]Y\HHˆ•TUH\Ù\œÈÑUŞÜÙ][™ßHH	HÒT‘H\Ù\—ÚYH	ˆ‚ˆ]ØZ]ÛÛ›‹™^Xİ]J]Y\K˜[YK\Ù\—ÚY
-Bˆ[ÙN‚ˆ\Ş[˜ÈÚ]Z[ÜÜ[]K˜ÛÛ›™Xİ
-—ÓSQJH\È‚ˆÈØY™NˆÙ][™È\È˜[Y]Yœ›ÛHÚ][\İˆ]Y\HHˆ•TUH\Ù\œÈÑUÜÙ][™ßHHÈÒT‘H\Ù\—ÚYHÈ‚ˆ]ØZ]‹™^Xİ]J]Y\K
-˜[YK\Ù\—ÚY
-JBˆ]ØZ]‹˜ÛÛ[Z]
+    async def update_user_setting(self, user_id, setting, value):
+        # Whitelist allowed settings
+        allowed_settings = ['username', 'selected_model', 'system_instruction', 'temperature', 'max_tokens', 'use_tools', 'stream_response']
+        if setting not in allowed_settings:
+            return
 
-B‚ˆ\Ş[˜ÈYˆØ]™WÛY\ÜØYÙJÙ[‹\Ù\—ÚYˆ[›ÛNˆİ‹ÛÛ[ˆİ‹\×ÛYYXNˆ›ÛÛH˜[ÙJN‚ˆYˆÙ[‹\HOHœÜİÜ™\È‚ˆYˆ›İÙ[‹œÛÛˆ]ØZ]Ù[‹˜ÛÛ›™Xİ
+        if self.type == "postgres":
+            async with self.pool.acquire() as conn:
+                # Upsert logic
+                await conn.execute(f"""
+                    INSERT INTO users (user_id, {setting}) VALUES ($1, $2)
+                    ON CONFLICT (user_id) DO UPDATE SET {setting} = $2
+                """, user_id, value)
+        else:
+            async with aiosqlite.connect(DB_NAME) as db:
+                await db.execute(f"INSERT OR IGNORE INTO users (user_id) VALUES (?)", (user_id,))
+                await db.execute(f"UPDATE users SET {setting} = ? WHERE user_id = ?", (value, user_id))
+                await db.commit()
 
-Bˆ\Ş[˜ÈÚ]Ù[‹œÛÛ˜XÜ]Z\™J
-H\ÈÛÛ›‚ˆ]ØZ]ÛÛ›‹™^Xİ]Jˆ’S”ÑT•S•ÈY\ÜØYÙWÚ\İÜH
-\Ù\—ÚY›ÛKÛÛ[\×ÛYYXJHSQTÈ
-	K	‹	Ë	
-H‹ˆ\Ù\—ÚY›ÛKÛÛ[\×ÛYYXBˆ
-Bˆ[ÙN‚ˆ\Ş[˜ÈÚ]Z[ÜÜ[]K˜ÛÛ›™Xİ
-—ÓSQJH\È‚ˆ]ØZ]‹™^Xİ]Jˆ’S”ÑT•S•ÈY\ÜØYÙWÚ\İÜH
-\Ù\—ÚY›ÛKÛÛ[\×ÛYYXJHSQTÈ
-ËËËÊH‹ˆ
-\Ù\—ÚY›ÛKÛÛ[\×ÛYYXJBˆ
-Bˆ]ØZ]‹˜ÛÛ[Z]
+    async def save_message(self, user_id, role, content, has_media=False):
+        if self.type == "postgres":
+            async with self.pool.acquire() as conn:
+                await conn.execute("""
+                    INSERT INTO message_history (user_id, role, content, has_media) 
+                    VALUES ($1, $2, $3, $4)
+                """, user_id, role, content, has_media)
+        else:
+            async with aiosqlite.connect(DB_NAME) as db:
+                await db.execute("""
+                    INSERT INTO message_history (user_id, role, content, has_media) 
+                    VALUES (?, ?, ?, ?)
+                """, (user_id, role, content, int(has_media)))
+                await db.commit()
 
-B‚ˆ\Ş[˜ÈYˆÙ]ØÚ]Ú\İÜJÙ[‹\Ù\—ÚYˆ[[Z]ˆ[HŒ
-N‚ˆYˆÙ[‹\HOHœÜİÜ™\È‚ˆYˆ›İÙ[‹œÛÛˆ]ØZ]Ù[‹˜ÛÛ›™Xİ
+    async def get_chat_history(self, user_id, limit=10):
+        if self.type == "postgres":
+            async with self.pool.acquire() as conn:
+                rows = await conn.fetch("""
+                    SELECT role, content FROM message_history 
+                    WHERE user_id = $1 ORDER BY timestamp DESC LIMIT $2
+                """, user_id, limit)
+                return [dict(r) for r in reversed(rows)]
+        else:
+            async with aiosqlite.connect(DB_NAME) as db:
+                db.row_factory = aiosqlite.Row
+                async with db.execute("""
+                    SELECT role, content FROM message_history 
+                    WHERE user_id = ? ORDER BY timestamp DESC LIMIT ?
+                """, (user_id, limit)) as cursor:
+                    rows = await cursor.fetchall()
+                    return [dict(r) for r in reversed(rows)]
 
-Bˆ\Ş[˜ÈÚ]Ù[‹œÛÛ˜XÜ]Z\™J
-H\ÈÛÛ›‚ˆ›İÜÈH]ØZ]ÛÛ›‹™™]Úˆ”ÑSPÕ›ÛKÛÛ[”“ÓHY\ÜØYÙWÚ\İÜHÒT‘H\Ù\—ÚYH	HÔ‘Tˆ–HYTĞÈSRU	ˆ‹ˆ\Ù\—ÚY[Z]ˆ
-Bˆ™]\›ˆÙXİ
-›İÊH›Üˆ›İÈ[ˆ™]™\œÙY
-›İÜÊWBˆ[ÙN‚ˆ\Ş[˜ÈÚ]Z[ÜÜ[]K˜ÛÛ›™Xİ
-—ÓSQJH\È‚ˆ‹œ›İ×Ù˜XİÜHHZ[ÜÜ[]K”›İÂˆ\Ş[˜ÈÚ]‹™^Xİ]Jˆ”ÑSPÕ›ÛKÛÛ[”“ÓHY\ÜØYÙWÚ\İÜHÒT‘H\Ù\—ÚYHÈÔ‘Tˆ–HYTĞÈSRUÈ‹ˆ
-\Ù\—ÚY[Z]
-Bˆ
-H\Èİ\œÛÜ‚ˆ›İÜÈH]ØZ]İ\œÛÜ‹™™]Ú[
+    async def clear_chat_history(self, user_id):
+        if self.type == "postgres":
+            async with self.pool.acquire() as conn:
+                await conn.execute("DELETE FROM message_history WHERE user_id = $1", user_id)
+        else:
+            async with aiosqlite.connect(DB_NAME) as db:
+                await db.execute("DELETE FROM message_history WHERE user_id = ?", (user_id,))
+                await db.commit()
 
-Bˆ™]\›ˆÙXİ
-›İÊH›Üˆ›İÈ[ˆ™]™\œÙY
-›İÜÊWB‚ˆ\Ş[˜ÈYˆÛX\—Ú\İÜJÙ[‹\Ù\—ÚYˆ[
-N‚ˆYˆÙ[‹\HOHœÜİÜ™\È‚ˆYˆ›İÙ[‹œÛÛˆ]ØZ]Ù[‹˜ÛÛ›™Xİ
+db = Database()
 
-Bˆ\Ş[˜ÈÚ]Ù[‹œÛÛ˜XÜ]Z\™J
-H\ÈÛÛ›‚ˆ]ØZ]ÛÛ›‹™^Xİ]J‘SUH”“ÓHY\ÜØYÙWÚ\İÜHÒT‘H\Ù\—ÚYH	H‹\Ù\—ÚY
-Bˆ[ÙN‚ˆ\Ş[˜ÈÚ]Z[ÜÜ[]K˜ÛÛ›™Xİ
-—ÓSQJH\È‚ˆ]ØZ]‹™^Xİ]J‘SUH”“ÓHY\ÜØYÙWÚ\İÜHÒT‘H\Ù\—ÚYHÈ‹
-\Ù\—ÚY
-JBˆ]ØZ]‹˜ÛÛ[Z]
+# Export functions for compatibility
+async def init_db():
+    await db.connect()
 
-B‚ˆÈÚ[™Û]Ûˆ[œİ[˜ÙB™—Ú[œİ[˜ÙHH]X˜\ÙJ
-B‚ˆÈÜ˜\\ˆ[˜İ[ÛœÈ›ÜˆÛÛ\]Xš[]B˜\Ş[˜ÈYˆ[š]ÙŠ
-N‚ˆ]ØZ]—Ú[œİ[˜ÙK˜ÛÛ›™Xİ
+async def get_user_settings(user_id):
+    return await db.get_user_settings(user_id)
 
-B‚˜\Ş[˜ÈYˆÙ]İ\Ù\—ÜÙ][™ÜÊ\Ù\—ÚY
-N‚ˆ™]\›ˆ]ØZ]—Ú[œİ[˜ÙK™Ù]İ\Ù\—ÜÙ][™ÜÊ\Ù\—ÚY
-B‚˜\Ş[˜ÈYˆ\]Wİ\Ù\—ÜÙ][™Ê\Ù\—ÚYÙ][™Ë˜[YJN‚ˆ]ØZ]—Ú[œİ[˜ÙK\]Wİ\Ù\—ÜÙ][™Ê\Ù\—ÚYÙ][™Ë˜[YJB‚˜\Ş[˜ÈYˆØ]™WÛY\ÜØYÙJ\Ù\—ÚY›ÛKÛÛ[\×ÛYYXOQ˜[ÙJN‚ˆ]ØZ]—Ú[œİ[˜ÙKœØ]™WÛY\ÜØYÙJ\Ù\—ÚY›ÛKÛÛ[\×ÛYYXJB‚˜\Ş[˜ÈYˆÙ]ØÚ]Ú\İÜJ\Ù\—ÚY[Z]LŒ
-N‚ˆ™]\›ˆ]ØZ]—Ú[œİ[˜ÙK™Ù]ØÚ]Ú\İÜJ\Ù\—ÚY[Z]
-B‚˜\Ş[˜ÈYˆÛX\—Ú\İÜJ\Ù\—ÚY
-N‚ˆ]ØZ]—Ú[œİ[˜ÙK˜ÛX\—Ú\İÜJ\Ù\—ÚY
+async def update_user_setting(user_id, setting, value):
+    await db.update_user_setting(user_id, setting, value)
+
+async def save_message(user_id, role, content, has_media=False):
+    await db.save_message(user_id, role, content, has_media)
+
+async def get_chat_history(user_id, limit=10):
+    return await db.get_chat_history(user_id, limit)
+
+async def clear_chat_history(user_id):
+    await db.clear_chat_history(user_id)
