@@ -1,1 +1,138 @@
-Lyog0J7QsdC90L7QstC70Y/QtdC8IGdlbWluaV9zZXJ2aWNlINC00LvRjyDQv9C+0LTQtNC10YDQttC60Lgg0L3QvtCy0YvRhSDRgtGA0LXQsdC+0LLQsNC90LjQuSAyMDI1INCz0L7QtNCwICovCmltcG9ydCBvcwppbXBvcnQgZ29vZ2xlLmdlbmVyYXRpdmVhaSBhcyBnZW5haQpmcm9tIGdvb2dsZS5nZW5lcmF0aXZlYWkudHlwZXMgaW1wb3J0IEhhcm1DYXRlZ29yeSwgSGFybUJsb2NrdGhyZXNob2xkCmltcG9ydCBQSUwuSW1hZ2UKZnJvbSBkb3RlbnYgaW1wb3J0IGxvYWRfZG90ZW52CmZyb20gZGF0YWJhc2UgaW1wb3J0IGdldF91c2VyX3NldHRpbmdzLCBnZXRfY2hhdF9oaXN0b3J5LCBzYXZlX21lc3NhZ2UsIHVwZGF0ZV91c2VyX3NldHRpbmcKZnJvbSBsb2dnZXJfY29uZmlnIGltcG9ydCBnZXRfbG9nZ2VyCmZyb20gc2VydmljZXMudG9vbHNfc2VydmljZSBpbXBvcnQgdG9vbHNfc2VydmljZQppbXBvcnQgZGF0ZXRpbWUKmltcG9ydCBhc3luY2lvCgpsb2FkX2RvdGVudigpCmxvZ2dlciA9IGdldF9sb2dnZXIoKQoKR0VNSU5JX0FQSV9LRVkgPSBvcy5nZXRlbnYoIkdFTUlOSV9BUElfS0VZIikKCmNsYXNzIEdlbWluaVNlcnZpY2U6CiAgICBkZWYgX19pbml0X18oc2VsZik6CiAgICAgICAgaWYgbm90IEdFTUlOSV9BUElfS0VZOgogICAgICAgICAgICBsb2dnZXIuY3JpdGljYWwoIkdFTUlOSV9BUElfS0VZIG5vdCBmb3VuZCEiKQogICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCJHRU1JTklfQVBJX0tFWSBub3QgZm91bmQiKQogICAgICAgIAogICAgICAgIGdlbmFpLmNvbmZpZ3VyZShhcGlfa2V5PUdFTUlOSV9BUElfS0VZKQogICAgICAgIAogICAgICAgIHNlbGYuYXZhaWxhYmxlX21vZGVscyA9IFtdCiAgICAgICAgc2VsZi5fcmVmcmVzaF9tb2RlbHMoKQoKICAgIGRlZiBfcmVmcmVzaF9tb2RlbHMoc2VsZik6CiAgICAgICAgdHJ5OgogICAgICAgICAgICBtb2RlbHMgPSBbXQogICAgICAgICAgICBmb3IgbSBpbiBnZW5haS5saXN0X21vZGVscygpOgogICAgICAgICAgICAgICAgaWYgJ2dlbmVyYXRlQ29udGVudCcgaW4gbS5zdXBwb3J0ZWRfZ2VuZXJhdGlvbl9tZXRob2RzOgogICAgICAgICAgICAgICAgICAgIG5hbWUgPSBtLm5hbWUucmVwbGFjZSgnbW9kZWxzLycsICcnKQogICAgICAgICAgICAgICAgICAgIG1vZGVscy5hcHBlbmQobmFtZSkKICAgICAgICAgICAgc2VsZi5hdmFpbGFibGVfbW9kZWxzID0gbW9kZWxzCiAgICAgICAgICAgIGxvZ2dlci5pbmZvKGYiQXZhaWxhYmxlIG1vZGVsczoge3NlbGYuYXZhaWxhYmxlX21vZGVsc30iKQogICAgICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgICAgICAgICAgbG9gZ2VyLndhcm5pbmcoZidDb3VsZCBub3QgZmV0Y2ggbW9kZWxzIGZyb20gQVBJOiB7ZX0nKQogICAgICAgICAgICBzZWxmLmF2YWlsYWJsZV9tb2RlbHMgPSBbImdlbWluaS0xLjUtZmxhc2giLCAiZ2VtaW5pLTEuNS1wcm8iLCAiZ2VtaW5pLTEuMC1wcm8iXQoKICAgIGFzeW5jIGRlZiBnZW5lcmF0ZV9yZXNwb25zZV9zdHJlYW0oc2VsZiwgdXNlcl9pZDogaW50LCBwcm9tcHQ6IHN0ciwgaW1hZ2VzOiBsaXN0ID0gTm9uZSwgYXVkaW9fcGF0aDogc3RyID0gTm9uZSk6CiAgICAgICAgc2V0dGluZ3MgPSBhd2FpdCBnZXRfdXNlcl9zZXR0aW5ncyh1c2VyX2lkKQogICAgICAgIG1vZGVsX25hbWUgPSBzZXR0aW5ncy5nZXQoInNlbGVjdGVkX21vZGVsIiwgImdlbWluaS0xLjUtZmxhc2gtbGF0ZXN0IikKICAgICAgICAKICAgICAgICBpZiBtb2RlbF9uYW1lIG5vdCBpbiBzZWxmLmF2YWlsYWJsZV9tb2RlbHMgYW5kICJsYXRlc3QiIG5vdCBpbiBtb2RlbF9uYW1lOgogICAgICAgICAgICBmYWxsYmFjayA9ICJnZW1pbmktMS41LWZsYXNoLWxhdGVzdCIgaWYgImdlbWluaS0xLjUtZmxhc2gtbGF0ZXN0IiBpbiBzZWxmLmF2YWlsYWJsZV9tb2RlbHMgZWxzZSBzZWxmLmF2YWlsYWJsZV9tb2RlbHNbMF0KICAgICAgICAgICAgbG9nZ2VyLndhcm5pbmcoZidNb2RlbCB7bW9kZWxfbmFtZX0gbm90IGZvdW5kLiBTd2l0Y2hpbmcgdG8ge2ZhbGxiYWNrfScpCiAgICAgICAgICAgIG1vZGVsX25hbWUgPSBmYWxsYmFjawogICAgICAgICAgICBhd2FpdCB1cGRhdGVfdXNlcl9zZXR0aW5nKHVzZXJfaWQsICJzZWxlY3RlZF9tb2RlbCIsIG1vZGVsX25hbWUpCgogICAgICAgIGxvZ2dlci5pbmZvKGYiU3RyZWFtIGdlbmVyYXRpb24gZm9yIHt1c2VyX2lkfSB1c2luZyB7bW9kZWxfbmFtZX0uIikKCiAgICAgICAgZ2VuZXJhdGlvbl9jb25maWcgPSB7CiAgICAgICAgICAgICJ0ZW1wZXJhdHVyZSI6IHNldHRpbmdzLmdldCgidGVtcGVyYXR1cmUiLCAwLjcpLAogICAgICAgICAgICAibWF4X291dHB1dF90b29rZW5zIjogc2V0dGluZ3MuZ2V0KCJtYXhfdG9rZW5zIiwgMjA0OCksCiAgICAgICAgfQoKICAgICAgICBhY3RpdmVfdG9vbHNfbmFtZXMgPSBbInNlYXJjaCIsICJjYWxjdWxhdG9yIiwgIndlYXRoZXIiXSBpZiBzZXR0aW5ncy5nZXQoInVzZV90b29scyIpIGVsc2UgW10KICAgICAgICB0b29scyA9IHRvb2xzX3NlcnZpY2UuZ2V0X3Rvb2xzX2Zvcl9nZW1pbmkoYWN0aXZlX3Rvb2xzX25hbWVzKQogICAgICAgIAogICAgICAgIHN0cmVhbWluZ19lbmFibGVkID0gc2V0dGluZ3MuZ2V0KCJzdHJlYW1fcmVzcG9uc2UiLCBUcnVlKQogICAgICAgIGlmIHRvb2xzOgogICAgICAgICAgICBzdHJlYW1pbmdfZW5hYmxlZCA9IEZhbHNlCgogICAgICAgIHRyeToKICAgICAgICAgICAgbW9kZWwgPSBnZW5haS5HZW5lcmF0aXZlTW9kZWwoCiAgICAgICAgICAgICAgICBtb2RlbF9uYW1lPW1vZGVsX25hbWUsCiAgICAgICAgICAgICAgICBzeXN0ZW1faW5zdHJ1Y3Rpb249c2V0dGluZ3MuZ2V0KCJzeXN0ZW1faW5zdHJ1Y3Rpb24iKSwKICAgICAgICAgICAgICAgIHRvb2xzPXRvb2xzCiAgICAgICAgICAgICkKCiAgICAgICAgICAgIGRiX2hpc3RvcnkgPSBhd2FpdCBnZXRfY2hhdF9oaXN0b3J5KHVzZXJfaWQsIGxpbWl0PTEwKQogICAgICAgICAgICBjaGF0X2hpc3RvcnkgPSBbXQogICAgICAgICAgICBmb3IgbXNnIGluIGRiX2hpc3Rvcnk6CiAgICAgICAgICAgICAgICBpZiBub3QgbXNnWyJjb250ZW50Il06IGNvbnRpbnVlCiAgICAgICAgICAgICAgICByb2xlID0gInVzZXIiIGlmIG1zZ1sicm9sZSJdID09ICJ1c2VyIiBlbHNlICJtb2RlbCIKICAgICAgICAgICAgICAgIGNoYXRfaGlzdG9yeS5hcHBlbmQoeyJyb2xlIjogcm9sZSwgInBhcnRzIjogW21zZ1siY29udGVudCJdXX0pCgogICAgICAgICAgICBjb250ZW50X3BhcnRzID0gW10KICAgICAgICAgICAgaWYgYXVkaW9fcGF0aDogCiAgICAgICAgICAgICAgICBhdWRpb19maWxlID0gZ2VuYWkudXBsb2FkX2ZpbGUocGF0aD1hdWRpb19wYXRoKQogICAgICAgICAgICAgICAgd2hpbGUgYXVkaW9fZmlsZS5zdGF0ZS5uYW1lID09ICJQUk9DRVNTSU5HIjoKICAgICAgICAgICAgICAgICAgICBhd2FpdCBhc3luY2lvLnNsZWVwKDEpCiAgICAgICAgICAgICAgICAgICAgYXVkaW9fZmlsZSA9IGdlbmFpLmdldF9maWxlKGF1ZGlvX2ZpbGUubmFtZSkKICAgICAgICAgICAgICAgIGNvbnRlbnRfcGFydHMuYXBwZW5kKGF1ZGlvX2ZpbGUpCiAgICAgICAgICAgICAgICBpZiBub3QgcHJvbXB0OiBwcm9tcHQgPSAi0JDQv9C00LjQviDRgdC+0L7QsdGJ0LXQvdC40LUiCiAgICAgICAgICAgIAogICAgICAgICAgICBpZiBpbWFnZXM6CiAgICAgICAgICAgICAgICBjb250ZW50X3BhcnRzLmV4dGVuZChpbWFnZXMpCgogICAgICAgICAgICBmdWxsX3Jlc3BvbnNlID0gIiIKICAgICAgICAgICAgCiAgICAgICAgICAgIGlmIHN0cmVhbWluZ19lbmFibGVkOgogICAgICAgICAgICAgICAgaWYgY29udGVudF9wYXJ0czoKICAgICAgICAgICAgICAgICAgICBjb250ZW50X3BhcnRzLmFwcGVuZChwcm9tcHQpCiAgICAgICAgICAgICAgICAgICAgcmVzcG9uc2VfaXRlcmF0b3IgPSBhd2FpdCBtb2RlbC5nZW5lcmF0ZV9jb250ZW50X2FzeW5jKAogICAgICAgICAgICAgICAgICAgICAgICBjb250ZW50X3BhcnRzLAogICAgICAgICAgICAgICAgICAgICAgICBnZW5lcmF0aW9uX2NvbmZpZz1nZW5lcmF0aW9uX2NvbmZpZywKICAgICAgICAgICAgICAgICAgICAgICAgc3RyZWFtPVRydWUKICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgIGNoYXQgPSBtb2RlbC5zdGFydF9jaGF0KGhpc3Rvcnk9Y2hhdF9oaXN0b3J5KQogICAgICAgICAgICAgICAgICAgIHJlc3BvbnNlX2l0ZXJhdG9yID0gYXdhaXQgY2hhdC5zZW5kX21lc3NhZ2VfYXN5bmMoCiAgICAgICAgICAgICAgICAgICAgICAgIHByb21wdCwKICAgICAgICAgICAgICAgICAgICAgICAgZ2VuZXJhdGlvbl9jb25maWc9Z2VuZXJhdGlvbl9jb25maWcsCiAgICAgICAgICAgICAgICAgICAgICAgIHN0cmVhbT1UcnVlCiAgICAgICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICBhc3luYyBmb3IgY2h1bmsgaW4gcmVzcG9uc2VfaXRlcmF0b3I6CiAgICAgICAgICAgICAgICAgICAgaWYgY2h1bmsudGV4dDoKICAgICAgICAgICAgICAgICAgICAgICAgZnVsbF9yZXNwb25zZSArPSBjaHVuay50ZXh0CiAgICAgICAgICAgICAgICAgICAgICAgIHlpZWxkIGZ1bGxfcmVzcG9uc2UKICAgICAgICAgICAgICAgIAogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgaWYgY29udGVudF9wYXJ0czoKICAgICAgICAgICAgICAgICAgICBjb250ZW50X3BhcnRzLmFwcGVuZChwcm9tcHQpCiAgICAgICAgICAgICAgICAgICAgcmVzcG9uc2UgPSBhd2FpdCBtb2RlbC5nZW5lcmF0ZV9jb250ZW50X2FzeW5jKAogICAgICAgICAgICAgICAgICAgICAgICBjb250ZW50X3BhcnRzLAogICAgICAgICAgICAgICAgICAgICAgICBnZW5lcmF0aW9uX2NvbmZpZz1nZW5lcmF0aW9uX2NvbmZpZwogICAgICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgY2hhdCA9IG1vZGVsLnN0YXJ0X2NoYXQoaGlzdG9yeT1jaGF0X2hpc3RvcnksIGVuYWJsZV9hdXRvbWF0aWNfZnVuY3Rpb25fY2FsbGluZz1UcnVlKQogICAgICAgICAgICAgICAgICAgIHJlc3BvbnNlID0gYXdhaXQgY2hhdC5zZW5kX21lc3NhZ2VfYXN5bmMoCiAgICAgICAgICAgICAgICAgICAgICAgIHByb21wdCwKICAgICAgICAgICAgICAgICAgICAgICAgZ2VuZXJhdGlvbl9jb25maWc9Z2VuZXJhdGlvbl9jb25maWcKICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIGZ1bGxfcmVzcG9uc2UgPSByZXNwb25zZS50ZXh0CiAgICAgICAgICAgICAgICB5aWVsZCBmdWxsX3Jlc3BvbnNlCgogICAgICAgICAgICBhd2FpdCBzYXZlX21lc3NhZ2UodXNlcl9pZCwgInVzZXIiLCBwcm9tcHQpCiAgICAgICAgICAgIGF3YWl0IHNhdmVfbWVzc2FnZSh1c2VyX2lkLCAibW9kZWwiLCBmdWxsX3Jlc3BvbnNlKQoKICAgICAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6CiAgICAgICAgICAgIGxvZ2dlci5lcnJvcihmIlN0cmVhbSBFcnJvcjoge2V9IikKICAgICAgICAgICAgeWllbGQgZCLQntGI0LjQsdC60LAgQVBJOiB7c3RyKGUpfSIKCmdlbWluaV9zZXJ2aWNlID0gR2VtaW5pU2VydmljZSgpCg==
+import os
+import google.generativeai as genai
+from google.generativeai.types import HarmCategory, HarmBlockThreshold
+import PIL.Image
+from dotenv import load_dotenv
+from database import get_user_settings, get_chat_history, save_message, update_user_setting
+from logger_config import get_logger
+from services.tools_service import tools_service
+import datetime
+import asyncio
+
+load_dotenv()
+logger = get_logger()
+
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
+class GeminiService:
+    def __init__(self):
+        if not GEMINI_API_KEY:
+            logger.critical("GEMINI_API_KEY not found!")
+            raise ValueError("GEMINI_API_KEY not found")
+        
+        genai.configure(api_key=GEMINI_API_KEY)
+        
+        self.available_models = []
+        self._refresh_models()
+
+    def _refresh_models(self):
+        try:
+            models = []
+            for m in genai.list_models():
+                if 'generateContent' in m.supported_generation_methods:
+                    name = m.name.replace('models/', '')
+                    models.append(name)
+            self.available_models = models
+            logger.info(f"Available models: {self.available_models}")
+        except Exception as e:
+            logger.warning(f'Could not fetch models from API: {e}')
+            self.available_models = ["gemini-1.5-flash", "gemini-1.5-pro", "gemini-1.0-pro"]
+
+    async def generate_response_stream(self, user_id: int, prompt: str, images: list = None, audio_path: str = None):
+        settings = await get_user_settings(user_id)
+        model_name = settings.get("selected_model", "gemini-1.5-flash-latest")
+        
+        if model_name not in self.available_models and "latest" not in model_name:
+            fallback = "gemini-1.5-flash-latest" if "gemini-1.5-flash-latest" in self.available_models else self.available_models[0]
+            logger.warning(f'Model {model_name} not found. Switching to {fallback}')
+            model_name = fallback
+            await update_user_setting(user_id, "selected_model", model_name)
+
+        logger.info(f"Stream generation for {user_id} using {model_name}.")
+
+        generation_config = {
+            "temperature": settings.get("temperature", 0.7),
+            "max_output_tokens": settings.get("max_tokens", 2048),
+        }
+
+        active_tools_names = ["search", "calculator", "weather"] if settings.get("use_tools") else []
+        tools = tools_service.get_tools_for_gemini(active_tools_names)
+        
+        streaming_enabled = settings.get("stream_response", True)
+        if tools:
+            streaming_enabled = False
+
+        try:
+            model = genai.GenerativeModel(
+                model_name=model_name,
+                system_instruction=settings.get("system_instruction"),
+                tools=tools
+            )
+
+            db_history = await get_chat_history(user_id, limit=10)
+            chat_history = []
+            for msg in db_history:
+                if not msg["content"]: continue
+                role = "user" if msg["role"] == "user" else "model"
+                chat_history.append({"role": role, "parts": [msg["content"]]})
+
+            content_parts = []
+            if audio_path: 
+                audio_file = genai.upload_file(path=audio_path)
+                while audio_file.state.name == "PROCESSING":
+                    await asyncio.sleep(1)
+                    audio_file = genai.get_file(audio_file.name)
+                content_parts.append(audio_file)
+                if not prompt: prompt = "Аудио сообщение"
+            
+            if images:
+                content_parts.extend(images)
+
+            full_response = ""
+            
+            if streaming_enabled:
+                if content_parts:
+                    content_parts.append(prompt)
+                    response_iterator = await model.generate_content_async(
+                        content_parts,
+                        generation_config=generation_config,
+                        stream=True
+                    )
+                else:
+                    chat = model.start_chat(history=chat_history)
+                    response_iterator = await chat.send_message_async(
+                        prompt,
+                        generation_config=generation_config,
+                        stream=True
+                    )
+                
+                async for chunk in response_iterator:
+                    if chunk.text:
+                        full_response += chunk.text
+                        yield full_response
+                
+            else:
+                if content_parts:
+                    content_parts.append(prompt)
+                    response = await model.generate_content_async(
+                        content_parts,
+                        generation_config=generation_config
+                    )
+                else:
+                    chat = model.start_chat(history=chat_history, enable_automatic_function_calling=True)
+                    response = await chat.send_message_async(
+                        prompt,
+                        generation_config=generation_config
+                    )
+                
+                full_response = response.text
+                yield full_response
+
+            await save_message(user_id, "user", prompt)
+            await save_message(user_id, "model", full_response)
+
+        except Exception as e:
+            logger.error(f"Stream Error: {e}")
+            yield f"Ошибка API: {str(e)}"
+
+gemini_service = GeminiService()
